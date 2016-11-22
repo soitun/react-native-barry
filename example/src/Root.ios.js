@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view'
-import stripe from 'tipsi-stripe'
-import ApplePayScreen from './ApplePayScreen'
-import CardFormScreen from './CardFormScreen'
-import CustomCardScreen from './CustomCardScreen'
-import CardTextFieldScreen from './CardTextFieldScreen'
-
-stripe.init({
-  publishableKey: '<PUBLISHABLE_KEY>',
-  merchantId: '<MERCHANT_ID>',
-})
+import barry from 'tipsi-barry'
 
 const styles = StyleSheet.create({
   container: {
@@ -69,18 +60,7 @@ export default class Root extends Component {
   )
 
   renderScene = ({ route }) => {
-    switch (route.key) {
-    case '1':
-      return <ApplePayScreen />
-    case '2':
-      return <CardFormScreen />
-    case '3':
-      return <CustomCardScreen />
-    case '4':
-      return <CardTextFieldScreen />
-    default:
-      return null
-    }
+    return <BarryScreen />
   };
 
   render() {

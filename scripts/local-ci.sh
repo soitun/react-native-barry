@@ -8,10 +8,6 @@ isIOS() {
 # BEFORE INSTALL  #
 ###################
 
-# Check Stripe environment variables
-[ -z "$PUBLISHABLE_KEY" ] && echo "Need to set Stripe PUBLISHABLE_KEY" && exit 1;
-isIOS && [ -z "$MERCHANT_ID" ] && echo "Need to set Apple Pay MERCHANT_ID" && exit 1;
-
 # Check is OSX
 ! isIOS && echo "Current os is not OSX, setup for iOS will be skipped"
 # Go to example project

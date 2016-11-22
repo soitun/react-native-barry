@@ -6,32 +6,21 @@ if [ -d ios_dir ]
   exit 0
 fi
 
-podfile="$ios_dir/Podfile"
-pod_dep="pod 'Stripe'"
+cartfile="Cartfile"
+scannerDep="github 'mikebuss/MTBBarcodeScanner'"
 
-echo "Checking Podfile in iOS project ($podfile)"
+echo "Checking Cartfile in iOS project ($cartfile)"
 
-if [ ! -f $podfile ]
+if ! grep -q "$scannerDep" "$cartfile"
   then
-  echo "Adding Podfile to iOS project"
-
-  cd ios
-  pod init >/dev/null 2>&1
-  cd ..
-else
-  echo "Found an existing Podfile"
-fi
-
-if ! grep -q "$pod_dep" "$podfile"
-  then
-  echo "Adding the following pod to Podfile":
+  echo "Adding the following pod to Cartfile":
   echo ""
-  echo $pod_dep
+  echo $scannerDep
   echo ""
 
-  echo $pod_dep >> $podfile
+  echo $scannerDep >> $cartfile
 fi
 
-echo "Installing Pods"
+echo "Update Carthage"
 
-pod install --project-directory=ios
+carthage update

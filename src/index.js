@@ -1,7 +1,3 @@
-import Stripe from './Stripe'
-import PaymentCardTextField from './PaymentCardTextField'
+import Barry from './Barry'
 
-export default Stripe
-export {
-  PaymentCardTextField
-}
+export default Barry

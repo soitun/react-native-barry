@@ -1,32 +1,33 @@
 {
-  "name": "tipsi-stripe",
-  "version": "0.0.1",
-  "description": "React Native Stripe binding for Andriod/iOS planforms",
+  "name": "tipsi-barry",
+  "version": "0.1.0",
+  "description": "React Native Barcode Scanner binding for Andriod/iOS planforms",
   "main": "src/index.js",
   "scripts": {
     "ci": "scripts/local-ci.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tipsi/tipsi-stripe.git"
+    "url": "git+https://github.com/tipsi/tipsi-barry.git"
   },
   "keywords": [
     "react",
     "react-native",
-    "stripe",
+    "barcode",
+    "scanner",
     "ios",
     "android"
   ],
   "author": "Tipsi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tipsi/tipsi-stripe/issues"
+    "url": "https://github.com/tipsi/tipsi-barry/issues"
   },
-  "homepage": "https://github.com/tipsi/tipsi-stripe#readme",
+  "homepage": "https://github.com/tipsi/tipsi-barry#readme",
   "rnpm": {
     "commands": {
-      "prelink": "node_modules/tipsi-stripe/scripts/pre-link.sh",
-      "postlink": "node_modules/tipsi-stripe/scripts/post-link.sh"
+      "prelink": "node_modules/tipsi-barry/scripts/pre-link.sh",
+      "postlink": "node_modules/tipsi-barry/scripts/post-link.sh"
     }
   },
   "peerDependencies": {
