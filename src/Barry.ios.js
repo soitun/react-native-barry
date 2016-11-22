@@ -1,5 +1,4 @@
 import { NativeModules } from 'react-native'
-import processTheme from './processTheme'
 
 const { TPSBarryManager } = NativeModules
 
